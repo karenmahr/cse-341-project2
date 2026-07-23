@@ -1,0 +1,33 @@
+GET http://localhost:3000/teams
+
+### GET team by ID
+
+GET http://localhost:3000/teams/6a5a3acf84109a405918bad3
+
+### CREATE team
+
+POST http://localhost:3000/teams HTTP/1.1
+content-type:application/json
+
+{
+    "email":"test5@example.com",
+    "username": "test5@test.com",
+    "name":"Hello5",
+    "ipaddress":"94.121.168.53"
+}
+
+### UPDATE team
+
+PUT http://localhost:3000/teams/6a5a3acf84109a405918bad3 HTTP/1.1
+content-type:application/json
+
+{
+    "email":"test5@example.com",
+    "username": "test5@test.com",
+    "name":"Hello5",
+    "ipaddress":"94.121.168.53"
+}
+
+### DELETE team
+
+DELETE http://localhost:3000/teams/6a5a3ba884109a405918bad6
