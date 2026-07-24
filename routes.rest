@@ -10,10 +10,9 @@ POST http://localhost:3000/teams HTTP/1.1
 content-type:application/json
 
 {
-    "email":"test5@example.com",
-    "username": "test5@test.com",
-    "name":"Hello5",
-    "ipaddress":"94.121.168.53"
+    "captain": "Martin Ødegaard",
+    "matches": "6",
+    "nation":"Norway"
 }
 
 ### UPDATE team
@@ -22,10 +21,9 @@ PUT http://localhost:3000/teams/6a5a3acf84109a405918bad3 HTTP/1.1
 content-type:application/json
 
 {
-    "email":"test5@example.com",
-    "username": "test5@test.com",
-    "name":"Hello5",
-    "ipaddress":"94.121.168.53"
+    "captain": "Martin Ødegaard",
+    "matches": "6",
+    "nation":"Norway"
 }
 
 ### DELETE team

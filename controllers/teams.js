@@ -85,7 +85,7 @@ const updateTeam = async (req, res) => {
 
         const response = await mongodb
             .getDatabase()
-            .db('project2') // ⚠️ Verifíca si tu BD se llama 'project01' o 'project2'
+            .db('project2') 
             .collection('teams')
             .replaceOne({ _id: teamId }, team);
 
