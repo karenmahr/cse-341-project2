@@ -49,7 +49,10 @@ const createTeam = async (req, res) => {
     const team = {
         captain: req.body.captain,
         matches: req.body.matches,
-        nation: req.body.nation
+        nation: req.body.nation,
+        confederation: req.body.confederation,
+        group: req.body.group,
+        coach:req.body.coach
     };
 
     try {
@@ -80,7 +83,10 @@ const updateTeam = async (req, res) => {
         const team = {
             captain: req.body.captain,
             matches: req.body.matches,
-            nation: req.body.nation
+            nation: req.body.nation,
+            confederation: req.body.confederation,
+            group: req.body.group,
+            coach: req.body.coach
         };
 
         const response = await mongodb

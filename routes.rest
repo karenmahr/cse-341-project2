@@ -29,3 +29,41 @@ content-type:application/json
 ### DELETE team
 
 DELETE http://localhost:3000/teams/6a5a3ba884109a405918bad6
+
+WORLD CUP
+### GET all
+
+GET http://localhost:3000/arg_wc
+
+### GET wc by ID
+
+GET http://localhost:3000/arg_wc/6a6d0e84258f6e2a46120125
+
+### CREATE wc
+
+POST http://localhost:3000/arg_wc HTTP/1.1
+content-type:application/json
+
+{
+  "year": 2018,
+  "host": "Russia",
+  "coach": "Jorge Sampaoli",
+  "final_position": "Round of 16",
+  "top_scorer": "Sergio Agüero (2 goals)",
+  "iconic_moment": "Marcos Rojo's 86th-minute left-footed volley against Nigeria."
+}
+
+### UPDATE wc
+
+PUT http://localhost:3000/arg_wc/6a6d0e84258f6e2a46120125 HTTP/1.1
+content-type:application/json
+
+{
+    "captain": "Martin Ødegaard",
+    "matches": "6",
+    "nation":"Norway"
+}
+
+### DELETE wc
+
+DELETE http://localhost:3000/arg_wc/6a5a3ba884109a405918bad6

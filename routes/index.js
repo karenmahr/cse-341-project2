@@ -24,5 +24,6 @@ router.get('/logout', function (req, res, next) {
 
 // 3. Rutas para Teams
 router.use('/teams', require('./teams'));
+router.use('/arg_wc', require('./arg_wc'));
 
 module.exports = router;
