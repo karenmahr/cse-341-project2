@@ -265,6 +265,35 @@
           "Argentina World Cup"
         ],
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "coach": {
+                  "example": "any"
+                },
+                "final_position": {
+                  "example": "any"
+                },
+                "host": {
+                  "example": "any"
+                },
+                "iconic_moment": {
+                  "example": "any"
+                },
+                "top_scorer": {
+                  "example": "any"
+                },
+                "year": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "204": {
             "description": "No Content"
@@ -324,6 +353,33 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "coach": {
+                  "example": "any"
+                },
+                "final_position": {
+                  "example": "any"
+                },
+                "host": {
+                  "example": "any"
+                },
+                "iconic_moment": {
+                  "example": "any"
+                },
+                "top_scorer": {
+                  "example": "any"
+                },
+                "year": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {

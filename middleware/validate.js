@@ -25,11 +25,11 @@ const saveTeam = (req, res, next) => {
 const saveWc = (req, res, next) => {
     const validationRule = {
         coach: 'required|string',
-        final_position: 'required|integer',
+        final_position: 'required|string',
         host: 'required|string',
         iconic_moment: 'required|string',
         top_scorer: 'required|string',
-        year: 'required|int'
+        year: 'required|integer'
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
