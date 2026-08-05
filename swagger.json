@@ -8,8 +8,7 @@
   "host": "project2-8tpk.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/": {

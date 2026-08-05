@@ -5,4 +5,12 @@ router.use('/', swaggerUi.serve);
 router.get('/', swaggerUi.setup(swaggerDocument));
 
 
+const options = {
+    swaggerOptions: {
+        withCredentials: true
+    }
+};
+
+router.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
+
 module.exports = router;

@@ -13,12 +13,18 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.set('trust proxy', 1);
+
 app
     .use(bodyParser.json())
     .use(session({
         secret: "secret",
         resave: false,
-        saveUninitialized: true
+        saveUninitialized: true,
+        cookie: {
+            sameSite: 'none',
+            secure: true
+        }
     }))
 
     .use(passport.initialize())
