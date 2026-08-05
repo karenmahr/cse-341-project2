@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 app.set('trust proxy', 1);
 
 app.use(cors({
-    origin: 'https://project2-8tpk.onrender.com',
+    origin: 'true',
     credentials: true,
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH', 'OPTIONS'],
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Z-Key', 'Authorization']
@@ -38,8 +38,6 @@ app
     .use(passport.initialize())
     .use(passport.session())
 
-    app.use("/", require("./routes/index.js"));
-
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
@@ -55,6 +53,8 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((user, done) => {
     done(null, user);
 });
+
+app.use("/", require("./routes/index.js"));
 
 app.get('/', (req, res) => {
     res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : "Logged out")
