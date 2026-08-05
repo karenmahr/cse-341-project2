@@ -31,21 +31,14 @@ app
     .use(passport.initialize())
     .use(passport.session())
 
-    .use((req, res, next) => {
-        res.setHeader("Access-Controll-Allow-Origin", "https://project2-8tpk.onrender.com");
-        res.setHeader(
-            "Access-Controll-Allow-Headers",
-            "Origin,X-Requested-With, Content-Type, Accept, Z-Key, Authorization"
-        );
-        res.setHeader(
-            "Access-Control-Allow-Methods",
-            "POST, GET, PUT, PATCH, OPTIONS, DELETE"
-        );
-        next();
-    })
-    .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
-    .use(cors({ origin: 'https://project2-8tpk.onrender.com' }))
-    .use("/", require("./routes/index.js"));
+    app.use(cors({
+        origin: 'https://project2-8tpk.onrender.com',
+        credentials: true,
+        methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH', 'OPTIONS'],
+        allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Z-Key', 'Authorization']
+    }));
+
+    app.use("/", require("./routes/index.js"));
 
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
