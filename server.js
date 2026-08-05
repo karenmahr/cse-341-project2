@@ -32,7 +32,7 @@ app
     .use(passport.session())
 
     .use((req, res, next) => {
-        res.setHeader("Access-Controll-Allow-Origin", "*");
+        res.setHeader("Access-Controll-Allow-Origin", "https://project2-8tpk.onrender.com");
         res.setHeader(
             "Access-Controll-Allow-Headers",
             "Origin,X-Requested-With, Content-Type, Accept, Z-Key, Authorization"
