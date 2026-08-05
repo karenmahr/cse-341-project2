@@ -15,6 +15,13 @@ const PORT = process.env.PORT || 3000;
 
 app.set('trust proxy', 1);
 
+app.use(cors({
+    origin: 'https://project2-8tpk.onrender.com',
+    credentials: true,
+    methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Z-Key', 'Authorization']
+}));
+
 app
     .use(bodyParser.json())
     .use(session({
@@ -30,13 +37,6 @@ app
 
     .use(passport.initialize())
     .use(passport.session())
-
-    app.use(cors({
-        origin: 'https://project2-8tpk.onrender.com',
-        credentials: true,
-        methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH', 'OPTIONS'],
-        allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Z-Key', 'Authorization']
-    }));
 
     app.use("/", require("./routes/index.js"));
 
