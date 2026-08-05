@@ -44,7 +44,7 @@ app
         next();
     })
     .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
-    .use(cors({ origin: '*' }))
+    .use(cors({ origin: 'https://project2-8tpk.onrender.com' }))
     .use("/", require("./routes/index.js"));
 
 passport.use(new GitHubStrategy({
