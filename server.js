@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 app.set('trust proxy', 1);
 
 app.use(cors({
-    origin: 'true',
+    origin: true,
     credentials: true,
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH', 'OPTIONS'],
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Z-Key', 'Authorization']
