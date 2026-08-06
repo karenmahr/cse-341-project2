@@ -57,7 +57,7 @@ passport.deserializeUser((user, done) => {
 app.use("/", require("./routes/index.js"));
 
 app.get('/', (req, res) => {
-    res.send(req.session.user === undefined ? `Logged in as ${req.session.user.displayName}` : "Logged out")
+    res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : "Logged out")
 });
 
 app.get('/github/callback', passport.authenticate('github', {

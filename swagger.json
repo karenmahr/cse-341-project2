@@ -79,11 +79,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "referer",
-            "in": "header",
-            "type": "string"
-          },
-          {
             "name": "body",
             "in": "body",
             "schema": {
@@ -172,11 +167,6 @@
             "type": "string"
           },
           {
-            "name": "referer",
-            "in": "header",
-            "type": "string"
-          },
-          {
             "name": "body",
             "in": "body",
             "schema": {
@@ -233,11 +223,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "referer",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -280,11 +265,6 @@
         ],
         "description": "",
         "parameters": [
-          {
-            "name": "referer",
-            "in": "header",
-            "type": "string"
-          },
           {
             "name": "body",
             "in": "body",
@@ -374,11 +354,6 @@
             "type": "string"
           },
           {
-            "name": "referer",
-            "in": "header",
-            "type": "string"
-          },
-          {
             "name": "body",
             "in": "body",
             "schema": {
@@ -434,11 +409,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "referer",
-            "in": "header",
             "type": "string"
           }
         ],

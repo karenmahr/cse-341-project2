@@ -7,7 +7,7 @@ router.use('/api-docs', require('./swagger'));
 // 2. Ruta raíz
 router.get('/', (req, res) => {
     //#swagger.tags=['Hello World']
-    if (req.session.user === undefined) {
+    if (req.session.user !== undefined) {
         res.send(`Logged in as ${req.session.user.displayName || req.session.user.username}`);
     } else {
         res.send('Logged out');
