@@ -30,7 +30,7 @@ app
         saveUninitialized: true,
         cookie: {
             sameSite: 'none',
-            secure: auto,
+            secure: 'auto',
             httpOnly: true
         }
     }))
